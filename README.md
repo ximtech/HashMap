@@ -26,6 +26,17 @@
 - Not thread safe
 - "Linear probing" algorithm. Can cause "data clustering" and long get operation for large amount of data
 
+### Add as CPM project dependency
+How to add CPM to the project, check the [link](https://github.com/cpm-cmake/CPM.cmake)
+```cmake
+CPMAddPackage(
+        NAME HashMap
+        GITHUB_REPOSITORY ximtech/HashMap
+        GIT_TAG origin/main)
+
+target_link_libraries(${PROJECT_NAME} HashMap)
+```
+
 ### Usage
 
 Example of usage:
