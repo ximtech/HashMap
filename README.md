@@ -1,4 +1,7 @@
 # HashMap
+
+[![tests](https://github.com/ximtech/HashMap/actions/workflows/cmake-ci.yml/badge.svg)](https://github.com/ximtech/HashMap/actions/workflows/cmake-ci.yml)
+
 **STM32** lightweight implementation of HashMap.
 
 ## Key points to note:
