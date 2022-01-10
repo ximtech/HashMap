@@ -69,6 +69,11 @@ MapValueType hashMapGet(HashMap hashMap, const char *key) {
     return (MapValueType) NULL;
 }
 
+MapValueType hashMapGetOrDefault(HashMap hashMap, const char *key, MapValueType defaultValue) {
+    MapValueType mapValue = hashMapGet(hashMap, key);
+    return mapValue != (MapValueType) NULL ? mapValue : defaultValue;
+}
+
 MapValueType hashMapRemove(HashMap hashMap, const char *key) {
     if (isHashMapNotEmpty(hashMap) && key != NULL) {
         Entry *entry = findEntry(hashMap->entries, hashMap->capacity, key);

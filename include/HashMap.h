@@ -21,6 +21,7 @@ HashMap getHashMapInstance(uint32_t capacity);
 
 bool hashMapPut(HashMap hashMap, const char *key, MapValueType value);
 MapValueType hashMapGet(HashMap hashMap, const char *key);
+MapValueType hashMapGetOrDefault(HashMap hashMap, const char *key, MapValueType defaultValue);
 MapValueType hashMapRemove(HashMap hashMap, const char *key);
 void hashMapAddAll(HashMap from, HashMap to);
 void hashMapClear(HashMap hashMap);

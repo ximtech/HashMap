@@ -48,6 +48,9 @@ static MunitResult testMapGetElements(const MunitParameter params[], void *map) 
     assert_int((int) hashMapGet(map, "val2"), ==, 23);
     assert_int((int) hashMapGet(map, "error"), ==, 0);
 
+    assert_int((int) hashMapGetOrDefault(map, "val3", (MapValueType) 0), ==, 24);
+    assert_int((int) hashMapGetOrDefault(map, "val4", (MapValueType) 33), ==, 33);
+
     assert_false(isHashMapContainsKey(map, "err"));
     assert_true(isHashMapContainsKey(map, "val3"));
 
