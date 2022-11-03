@@ -26,7 +26,6 @@
 
 - Mostly static Hash data type, can't be changed at runtime
 - Only string as a key
-- Not thread safe
 - "Linear probing" algorithm. Can cause "data clustering" and long get operation for large amount of data
 
 ### Add as CPM project dependency

@@ -1,13 +1,10 @@
 #include "HashMap.h"
 
-typedef struct Entry Entry;
-typedef struct Bucket Bucket;
-
-struct Entry {
-    char *key;  // key is NULL if this slot is empty
+typedef struct Entry {
+    char *key;  // key is NULL if this slot empty
     MapValueType value;
     bool isDeleted;
-};
+} Entry;
 
 struct HashMap {
     Entry *entries;
